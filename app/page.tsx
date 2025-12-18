@@ -1,4 +1,3 @@
-import TopBar from "./src/components/TopBar/page";
 import Navbar from "./src/components/NavBar/page";
 import BannerSlider from "./src/components/BannerSlider/page";
 import AboutSection from "./src/components/AboutSection/page";
@@ -8,23 +7,24 @@ import Footer from "./src/components/Footer/page";
 export default function Home() {
   return (
     <div className="min-h-screen bg-white">
-      {/* Top Bar */}
-      <TopBar />
-
       {/* Navigation */}
       <Navbar />
 
-      {/* Hero Slider */}
-      <BannerSlider />
+      {/* Main Content - Add padding for fixed navbar */}
+      <main className="pt-20">
 
-      {/* About Section */}
-      <AboutSection />
+        {/* Hero Slider */}
+        <BannerSlider />
 
-      {/* Products Preview */}
-      <ProductsPreview />
+        {/* About Section */}
+        <AboutSection />
 
-      {/* Footer */}
-      <Footer />
+        {/* Products Preview */}
+        <ProductsPreview />
+
+        {/* Footer */}
+        <Footer />
+      </main>
     </div>
   );
 }

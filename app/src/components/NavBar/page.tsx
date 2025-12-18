@@ -1,152 +1,161 @@
 "use client";
 
-import { Menu, X } from "lucide-react";
+import { Globe, X } from "lucide-react";
 import Image from "next/image";
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import Link from "next/link";
+
 const Navbar = () => {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
+  const [scrolled, setScrolled] = useState(false);
+
+  useEffect(() => {
+    const handleScroll = () => {
+      setScrolled(window.scrollY > 20);
+    };
+    window.addEventListener("scroll", handleScroll);
+    return () => window.removeEventListener("scroll", handleScroll);
+  }, []);
 
   return (
     <>
       {/* NAVBAR */}
-      <nav className="bg-white shadow-md sticky top-0 z-50">
-        <div className="max-w-7xl mx-auto px-4">
+      <nav
+        className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${scrolled
+            ? "bg-white/95 backdrop-blur-md shadow-lg"
+            : "bg-white/80 backdrop-blur-sm shadow-md"
+          }`}
+      >
+        <div className="max-w-7xl mx-auto px-4 sm:px-6">
           <div className="flex justify-between items-center h-20">
             {/* LOGO */}
-            <div className="flex items-center">
-              <div className="shadow-lg rounded-full overflow-hidden">
+            <Link href="/" className="flex items-center group">
+              <div className="relative shadow-lg rounded-full overflow-hidden transform transition-transform duration-300 group-hover:scale-105">
                 <Image
                   src="/logo.png"
                   alt="Sambhav Exporter Logo"
-                  width={64}
-                  height={64}
+                  width={56}
+                  height={56}
                   className="object-cover"
                   priority
                 />
               </div>
               <div className="ml-3">
-                <div className="text-xl font-bold text-green-700">SAMBHAV</div>
-                <div className="text-xs text-gray-600 tracking-wider">
+                <div className="text-xl font-bold bg-gradient-to-r from-green-600 to-emerald-600 bg-clip-text text-transparent">
+                  SAMBHAV
+                </div>
+                <div className="text-xs text-gray-600 tracking-[0.2em] font-medium">
                   EXPORTER
                 </div>
               </div>
-            </div>
+            </Link>
 
             {/* DESKTOP MENU */}
-            <div className="hidden md:flex items-center gap-8">
-              <Link
-                href="/"
-                className="text-gray-700 hover:text-green-600 font-semibold"
-              >
-                Home
-              </Link>
-              <Link href="/about-us" className="text-gray-700 hover:text-green-600">
-                About Us
-              </Link>
-              <Link
-                href="/products"
-                className="text-gray-700 hover:text-green-600"
-              >
-                Products
-              </Link>
-              <Link href="contact-us" className="text-gray-700 hover:text-green-600">
-                Contact Us
-              </Link>
-              <select className="border border-gray-300 rounded px-3 py-1 text-sm">
-                <option>English</option>
-                <option>Hindi</option>
-              </select>
+            <div className="hidden md:flex items-center gap-1">
+              <NavLink href="/">Home</NavLink>
+              <NavLink href="/about-us">About Us</NavLink>
+              <NavLink href="/products">Products</NavLink>
+              <NavLink href="/contact-us">Contact Us</NavLink>
+
+              <div className="ml-4">
+                <button className="flex items-center gap-2 px-4 py-2 rounded-full text-gray-700 hover:text-green-600 hover:bg-green-50 transition">
+                  <Globe size={18} />
+                  <span className="text-sm font-medium">EN</span>
+                </button>
+              </div>
             </div>
 
             {/* MOBILE MENU BUTTON */}
             <button
-              className="md:hidden text-gray-700"
+              className="md:hidden p-2 rounded-lg text-gray-700 hover:bg-green-50 hover:text-green-600 transition"
               onClick={() => setMobileMenuOpen(true)}
+              aria-label="Open menu"
             >
-              <Menu size={26} />
+              <div className="w-6 h-6 flex flex-col justify-center gap-1">
+                <span className="w-6 h-0.5 bg-current" />
+                <span className="w-6 h-0.5 bg-current" />
+                <span className="w-6 h-0.5 bg-current" />
+              </div>
             </button>
           </div>
         </div>
       </nav>
 
-      {/* BACKGROUND OVERLAY */}
+      {/* OVERLAY */}
       <div
-        className={`fixed inset-0 z-40 transition-all duration-300 ${
-          mobileMenuOpen
-            ? "bg-black/40 backdrop-blur-sm opacity-100"
+        className={`fixed inset-0 z-40 transition-all duration-300 ${mobileMenuOpen
+            ? "bg-black/50 backdrop-blur-sm opacity-100"
             : "pointer-events-none opacity-0"
-        }`}
+          }`}
         onClick={() => setMobileMenuOpen(false)}
       />
 
-      {/* FULL MOBILE DRAWER (RIGHT) */}
+      {/* MOBILE DRAWER */}
       <div
-        className={`fixed top-0 right-0 h-full w-full z-50
-        bg-white/95 backdrop-blur-xl
-        transform transition-transform duration-500 ease-in-out
-        ${mobileMenuOpen ? "translate-x-0" : "translate-x-full"}`}
+        className={`fixed inset-0 z-50 bg-white transform transition-transform duration-300 ease-out ${mobileMenuOpen ? "translate-x-0" : "translate-x-full"
+          }`}
       >
         {/* MOBILE HEADER */}
-        <div className="flex items-center justify-between px-6 h-20 border-b">
+        <div className="flex items-center justify-between px-6 h-20 border-b border-gray-100">
           <div className="flex items-center gap-3">
             <div className="shadow-md rounded-full overflow-hidden">
               <Image
                 src="/logo.png"
                 alt="Sambhav Exporter Logo"
-                width={48}
-                height={48}
+                width={44}
+                height={44}
                 className="object-cover"
               />
             </div>
             <div>
-              <div className="text-lg font-bold text-green-700">SAMBHAV</div>
+              <div className="text-lg font-bold bg-gradient-to-r from-green-600 to-emerald-600 bg-clip-text text-transparent">
+                SAMBHAV
+              </div>
               <div className="text-xs text-gray-600 tracking-wider">
                 EXPORTER
               </div>
             </div>
           </div>
 
-          <button onClick={() => setMobileMenuOpen(false)}>
+          {/* CLOSE BUTTON */}
+          <button
+            onClick={() => setMobileMenuOpen(false)}
+            className="p-2 rounded-lg text-gray-600 hover:bg-gray-100 hover:text-green-600 transition"
+            aria-label="Close menu"
+          >
             <X size={26} />
           </button>
         </div>
 
-        {/* MOBILE MENU LINKS */}
-        <div className="flex flex-col px-8 pt-10 gap-8 text-2xl font-medium">
-          <a
-            href="#home"
-            onClick={() => setMobileMenuOpen(false)}
-            className="text-green-700"
-          >
+        {/* MOBILE LINKS */}
+        <div className="flex flex-col px-6 pt-8 gap-2">
+          <MobileNavLink href="/" onClick={() => setMobileMenuOpen(false)}>
             Home
-          </a>
-          <a
-            href="#about"
+          </MobileNavLink>
+          <MobileNavLink
+            href="/about-us"
             onClick={() => setMobileMenuOpen(false)}
-            className="text-gray-800"
           >
             About Us
-          </a>
-          <a
-            href="#products"
+          </MobileNavLink>
+          <MobileNavLink
+            href="/products"
             onClick={() => setMobileMenuOpen(false)}
-            className="text-gray-800"
           >
             Products
-          </a>
-          <a
-            href="#contact"
+          </MobileNavLink>
+          <MobileNavLink
+            href="/contact-us"
             onClick={() => setMobileMenuOpen(false)}
-            className="text-gray-800"
           >
             Contact Us
-          </a>
+          </MobileNavLink>
         </div>
 
         {/* MOBILE FOOTER */}
-        <div className="absolute bottom-6 left-0 w-full text-center text-sm text-gray-500">
+        <div className="absolute bottom-6 left-0 w-full px-6 text-center text-xs text-gray-500 border-t border-gray-100 pt-4">
           © {new Date().getFullYear()} Sambhav Exporter
+          <div className="mt-1 text-gray-400">All Rights Reserved</div>
         </div>
       </div>
     </>
@@ -154,3 +163,39 @@ const Navbar = () => {
 };
 
 export default Navbar;
+
+/* ---------------- COMPONENTS ---------------- */
+
+const NavLink = ({
+  href,
+  children,
+}: {
+  href: string;
+  children: React.ReactNode;
+}) => (
+  <Link
+    href={href}
+    className="relative px-4 py-2 text-gray-700 font-medium hover:text-green-600 transition group"
+  >
+    {children}
+    <span className="absolute bottom-0 left-1/2 -translate-x-1/2 w-0 h-0.5 bg-gradient-to-r from-green-500 to-emerald-600 group-hover:w-3/4 transition-all duration-300 rounded-full" />
+  </Link>
+);
+
+const MobileNavLink = ({
+  href,
+  children,
+  onClick,
+}: {
+  href: string;
+  children: React.ReactNode;
+  onClick: () => void;
+}) => (
+  <Link
+    href={href}
+    onClick={onClick}
+    className="px-4 py-3 rounded-lg text-lg font-medium text-gray-700 hover:bg-gray-50 transition"
+  >
+    {children}
+  </Link>
+);
