@@ -3,7 +3,7 @@
 import { Menu, X } from "lucide-react";
 import Image from "next/image";
 import React, { useState } from "react";
-
+import Link from "next/link";
 const Navbar = () => {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
 
@@ -26,9 +26,7 @@ const Navbar = () => {
                 />
               </div>
               <div className="ml-3">
-                <div className="text-xl font-bold text-green-700">
-                  SAMBHAV
-                </div>
+                <div className="text-xl font-bold text-green-700">SAMBHAV</div>
                 <div className="text-xs text-gray-600 tracking-wider">
                   EXPORTER
                 </div>
@@ -37,18 +35,24 @@ const Navbar = () => {
 
             {/* DESKTOP MENU */}
             <div className="hidden md:flex items-center gap-8">
-              <a href="#home" className="text-green-600 font-semibold">
+              <Link
+                href="/"
+                className="text-gray-700 hover:text-green-600 font-semibold"
+              >
                 Home
-              </a>
-              <a href="#about" className="text-gray-700 hover:text-green-600">
+              </Link>
+              <Link href="/about-us" className="text-gray-700 hover:text-green-600">
                 About Us
-              </a>
-              <a href="#products" className="text-gray-700 hover:text-green-600">
+              </Link>
+              <Link
+                href="/products"
+                className="text-gray-700 hover:text-green-600"
+              >
                 Products
-              </a>
-              <a href="#contact" className="text-gray-700 hover:text-green-600">
+              </Link>
+              <Link href="contact-us" className="text-gray-700 hover:text-green-600">
                 Contact Us
-              </a>
+              </Link>
               <select className="border border-gray-300 rounded px-3 py-1 text-sm">
                 <option>English</option>
                 <option>Hindi</option>
@@ -96,9 +100,7 @@ const Navbar = () => {
               />
             </div>
             <div>
-              <div className="text-lg font-bold text-green-700">
-                SAMBHAV
-              </div>
+              <div className="text-lg font-bold text-green-700">SAMBHAV</div>
               <div className="text-xs text-gray-600 tracking-wider">
                 EXPORTER
               </div>
