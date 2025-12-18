@@ -1,5 +1,7 @@
 "use client";
+
 import { Menu, X } from "lucide-react";
+import Image from "next/image";
 import React, { useState } from "react";
 
 const Navbar = () => {
@@ -7,27 +9,33 @@ const Navbar = () => {
 
   return (
     <>
+      {/* NAVBAR */}
       <nav className="bg-white shadow-md sticky top-0 z-50">
         <div className="max-w-7xl mx-auto px-4">
           <div className="flex justify-between items-center h-20">
-            {/* Logo */}
+            {/* LOGO */}
             <div className="flex items-center">
-              <div className="w-16 h-16 rounded-full shadow-lg overflow-hidden">
-                <img
+              <div className="shadow-lg rounded-full overflow-hidden">
+                <Image
                   src="/logo.png"
                   alt="Sambhav Exporter Logo"
-                  className="w-full h-full object-cover"
+                  width={64}
+                  height={64}
+                  className="object-cover"
+                  priority
                 />
               </div>
               <div className="ml-3">
-                <div className="text-xl font-bold text-green-700">SAMBHAV</div>
+                <div className="text-xl font-bold text-green-700">
+                  SAMBHAV
+                </div>
                 <div className="text-xs text-gray-600 tracking-wider">
                   EXPORTER
                 </div>
               </div>
             </div>
 
-            {/* Desktop Menu */}
+            {/* DESKTOP MENU */}
             <div className="hidden md:flex items-center gap-8">
               <a href="#home" className="text-green-600 font-semibold">
                 Home
@@ -47,7 +55,7 @@ const Navbar = () => {
               </select>
             </div>
 
-            {/* Mobile Button */}
+            {/* MOBILE MENU BUTTON */}
             <button
               className="md:hidden text-gray-700"
               onClick={() => setMobileMenuOpen(true)}
@@ -58,7 +66,7 @@ const Navbar = () => {
         </div>
       </nav>
 
-      {/* Background Overlay */}
+      {/* BACKGROUND OVERLAY */}
       <div
         className={`fixed inset-0 z-40 transition-all duration-300 ${
           mobileMenuOpen
@@ -68,21 +76,23 @@ const Navbar = () => {
         onClick={() => setMobileMenuOpen(false)}
       />
 
-      {/* FULL Mobile Drawer (Right) */}
+      {/* FULL MOBILE DRAWER (RIGHT) */}
       <div
         className={`fixed top-0 right-0 h-full w-full z-50
         bg-white/95 backdrop-blur-xl
         transform transition-transform duration-500 ease-in-out
         ${mobileMenuOpen ? "translate-x-0" : "translate-x-full"}`}
       >
-        {/* Brand Header */}
+        {/* MOBILE HEADER */}
         <div className="flex items-center justify-between px-6 h-20 border-b">
           <div className="flex items-center gap-3">
-            <div className="w-12 h-12 rounded-full shadow-md overflow-hidden">
-              <img
+            <div className="shadow-md rounded-full overflow-hidden">
+              <Image
                 src="/logo.png"
                 alt="Sambhav Exporter Logo"
-                className="w-full h-full object-cover"
+                width={48}
+                height={48}
+                className="object-cover"
               />
             </div>
             <div>
@@ -100,7 +110,7 @@ const Navbar = () => {
           </button>
         </div>
 
-        {/* Menu Links */}
+        {/* MOBILE MENU LINKS */}
         <div className="flex flex-col px-8 pt-10 gap-8 text-2xl font-medium">
           <a
             href="#home"
@@ -132,7 +142,7 @@ const Navbar = () => {
           </a>
         </div>
 
-        {/* Footer */}
+        {/* MOBILE FOOTER */}
         <div className="absolute bottom-6 left-0 w-full text-center text-sm text-gray-500">
           © {new Date().getFullYear()} Sambhav Exporter
         </div>
