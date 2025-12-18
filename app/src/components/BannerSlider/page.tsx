@@ -58,14 +58,14 @@ const BannerSlider = () => {
       />
 
       {/* OVERLAYS */}
-      <div className="absolute inset-0 bg-gradient-to-br from-emerald-900/80 via-green-800/60 to-black/70" />
+      <div className="absolute inset-0 bg-gradient-to-br from-primary-900/80 via-primary-800/60 to-black/70" />
       <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent" />
 
       {/* CONTENT */}
       <div className="relative max-w-7xl mx-auto px-4 h-full flex items-center">
         <div className="text-center w-full text-white space-y-6">
           <div
-            className={`text-sm md:text-base font-bold tracking-[0.3em] text-green-200 uppercase transition-all duration-300 ${isAnimating ? "opacity-0 translate-y-3" : "opacity-100"
+            className={`text-sm md:text-base font-bold tracking-[0.3em] text-primary-200 uppercase transition-all duration-300 ${isAnimating ? "opacity-0 translate-y-3" : "opacity-100"
               }`}
           >
             {slides[currentSlide].title}
@@ -80,14 +80,14 @@ const BannerSlider = () => {
           </h1>
 
           <p
-            className={`text-xl md:text-3xl text-green-50 max-w-3xl mx-auto transition-all duration-300 ${isAnimating ? "opacity-0 translate-y-4" : "opacity-100"
+            className={`text-xl md:text-3xl text-primary-50 max-w-3xl mx-auto transition-all duration-300 ${isAnimating ? "opacity-0 translate-y-4" : "opacity-100"
               }`}
           >
             {slides[currentSlide].description}
           </p>
 
           <div className="flex gap-4 justify-center pt-4">
-            <button className="px-10 py-4 rounded-full font-bold text-lg bg-gradient-to-r from-green-500 to-emerald-600 hover:scale-105 transition">
+            <button className="px-10 py-4 rounded-full font-bold text-lg bg-gradient-to-r from-primary-500 to-primary-600 hover:scale-105 transition shadow-xl hover:shadow-2xl">
               Explore Products
             </button>
             <button className="px-10 py-4 rounded-full font-bold text-lg bg-white/10 border border-white/30 hover:bg-white/20 transition">
@@ -121,8 +121,8 @@ const BannerSlider = () => {
             key={index}
             onClick={() => goToSlide(index)}
             className={`h-2 rounded-full transition-all duration-300 ${currentSlide === index
-                ? "bg-white w-10 shadow-lg"
-                : "bg-white/40 w-2 hover:bg-white/60 hover:w-6"
+              ? "bg-white w-10 shadow-lg"
+              : "bg-white/40 w-2 hover:bg-white/60 hover:w-6"
               }`}
             aria-label={`Go to slide ${index + 1}`}
           />

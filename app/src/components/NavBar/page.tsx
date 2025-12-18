@@ -23,11 +23,10 @@ const Navbar = () => {
     <>
       {/* NAVBAR */}
       <nav
-        className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
-          scrolled
-            ? "bg-white/95 backdrop-blur-md shadow-lg"
-            : "bg-white/80 backdrop-blur-sm shadow-md"
-        }`}
+        className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${scrolled
+          ? "bg-white/95 backdrop-blur-md shadow-lg"
+          : "bg-white/80 backdrop-blur-sm shadow-md"
+          }`}
       >
         <div className="max-w-7xl mx-auto px-4 sm:px-6">
           <div className="flex justify-between items-center h-20">
@@ -44,10 +43,10 @@ const Navbar = () => {
                 />
               </div>
               <div className="ml-3">
-                <div className="text-xl font-bold bg-linear-to-r from-green-600 to-emerald-600 bg-clip-text text-transparent">
+                <div className="text-xl font-bold text-primary-800">
                   SAMBHAV
                 </div>
-                <div className="text-xs text-gray-600 tracking-[0.2em] font-medium">
+                <div className="text-xs text-primary-600 tracking-[0.2em] font-medium">
                   EXPORTER
                 </div>
               </div>
@@ -61,7 +60,7 @@ const Navbar = () => {
               <NavLink href="/contact-us">Contact Us</NavLink>
 
               <div className="ml-4">
-                <button className="flex items-center gap-2 px-4 py-2 rounded-full text-gray-700 hover:text-green-600 hover:bg-green-50 transition">
+                <button className="flex items-center gap-2 px-4 py-2 rounded-full text-foreground hover:text-primary-600 hover:bg-primary-50 transition">
                   <Globe size={18} />
                   <span className="text-sm font-medium">EN</span>
                 </button>
@@ -70,14 +69,14 @@ const Navbar = () => {
 
             {/* MOBILE MENU BUTTON */}
             <button
-              className="md:hidden p-2 rounded-lg text-gray-700 hover:bg-green-50 hover:text-green-600 transition"
+              className="md:hidden p-2 rounded-lg text-primary-800 hover:bg-primary-100 hover:text-primary-900 transition-all hover:scale-105"
               onClick={() => setMobileMenuOpen(true)}
               aria-label="Open menu"
             >
               <div className="w-6 h-6 flex flex-col justify-center gap-1">
-                <span className="w-6 h-0.5 bg-current" />
-                <span className="w-6 h-0.5 bg-current" />
-                <span className="w-6 h-0.5 bg-current" />
+                <span className="w-6 h-0.5 bg-current rounded-full" />
+                <span className="w-6 h-0.5 bg-current rounded-full" />
+                <span className="w-6 h-0.5 bg-current rounded-full" />
               </div>
             </button>
           </div>
@@ -86,19 +85,17 @@ const Navbar = () => {
 
       {/* OVERLAY */}
       <div
-        className={`fixed inset-0 z-40 transition-all duration-300 ${
-          mobileMenuOpen
-            ? "bg-black/50 backdrop-blur-sm opacity-100"
-            : "pointer-events-none opacity-0"
-        }`}
+        className={`fixed inset-0 z-40 transition-all duration-300 ${mobileMenuOpen
+          ? "bg-black/50 backdrop-blur-sm opacity-100"
+          : "pointer-events-none opacity-0"
+          }`}
         onClick={() => setMobileMenuOpen(false)}
       />
 
       {/* MOBILE DRAWER */}
       <div
-        className={`fixed inset-0 z-50 bg-white transform transition-transform duration-300 ease-out ${
-          mobileMenuOpen ? "translate-x-0" : "translate-x-full"
-        }`}
+        className={`fixed inset-0 z-50 bg-white transform transition-transform duration-300 ease-out ${mobileMenuOpen ? "translate-x-0" : "translate-x-full"
+          }`}
       >
         {/* MOBILE HEADER */}
         <div className="flex items-center justify-between px-6 h-20 border-b border-gray-100">
@@ -113,10 +110,10 @@ const Navbar = () => {
               />
             </div>
             <div>
-              <div className="text-lg font-bold bg-linear-to-r from-green-600 to-emerald-600 bg-clip-text text-transparent">
+              <div className="text-lg font-bold text-primary-800">
                 SAMBHAV
               </div>
-              <div className="text-xs text-gray-600 tracking-wider">
+              <div className="text-xs text-primary-600 tracking-wider">
                 EXPORTER
               </div>
             </div>
@@ -125,7 +122,7 @@ const Navbar = () => {
           {/* CLOSE BUTTON */}
           <button
             onClick={() => setMobileMenuOpen(false)}
-            className="p-2 rounded-lg text-gray-600 hover:bg-gray-100 hover:text-green-600 transition"
+            className="p-2 rounded-lg text-foreground/70 hover:bg-primary-100 hover:text-primary-600 transition"
             aria-label="Close menu"
           >
             <X size={26} />
