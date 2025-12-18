@@ -3,6 +3,7 @@ import BannerSlider from "./src/components/BannerSlider/page";
 import AboutSection from "./src/components/AboutSection/page";
 import ProductsPreview from "./src/components/ProductsPreview/page";
 import Footer from "./src/components/Footer/page";
+import WhyChooseUs from "./src/components/whyChoose/page";
 
 export default function Home() {
   return (
@@ -23,6 +24,8 @@ export default function Home() {
         <ProductsPreview />
 
         {/* Footer */}
+
+        <WhyChooseUs />
         <Footer />
       </main>
     </div>
