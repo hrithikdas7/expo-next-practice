@@ -4,6 +4,8 @@ import { Globe, X } from "lucide-react";
 import Image from "next/image";
 import React, { useState, useEffect } from "react";
 import Link from "next/link";
+import { NavLink } from "../Navlink/page";
+import { MobileNavLink } from "../MobNavLink/page";
 
 const Navbar = () => {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
@@ -21,10 +23,11 @@ const Navbar = () => {
     <>
       {/* NAVBAR */}
       <nav
-        className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${scrolled
+        className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
+          scrolled
             ? "bg-white/95 backdrop-blur-md shadow-lg"
             : "bg-white/80 backdrop-blur-sm shadow-md"
-          }`}
+        }`}
       >
         <div className="max-w-7xl mx-auto px-4 sm:px-6">
           <div className="flex justify-between items-center h-20">
@@ -41,7 +44,7 @@ const Navbar = () => {
                 />
               </div>
               <div className="ml-3">
-                <div className="text-xl font-bold bg-gradient-to-r from-green-600 to-emerald-600 bg-clip-text text-transparent">
+                <div className="text-xl font-bold bg-linear-to-r from-green-600 to-emerald-600 bg-clip-text text-transparent">
                   SAMBHAV
                 </div>
                 <div className="text-xs text-gray-600 tracking-[0.2em] font-medium">
@@ -83,17 +86,19 @@ const Navbar = () => {
 
       {/* OVERLAY */}
       <div
-        className={`fixed inset-0 z-40 transition-all duration-300 ${mobileMenuOpen
+        className={`fixed inset-0 z-40 transition-all duration-300 ${
+          mobileMenuOpen
             ? "bg-black/50 backdrop-blur-sm opacity-100"
             : "pointer-events-none opacity-0"
-          }`}
+        }`}
         onClick={() => setMobileMenuOpen(false)}
       />
 
       {/* MOBILE DRAWER */}
       <div
-        className={`fixed inset-0 z-50 bg-white transform transition-transform duration-300 ease-out ${mobileMenuOpen ? "translate-x-0" : "translate-x-full"
-          }`}
+        className={`fixed inset-0 z-50 bg-white transform transition-transform duration-300 ease-out ${
+          mobileMenuOpen ? "translate-x-0" : "translate-x-full"
+        }`}
       >
         {/* MOBILE HEADER */}
         <div className="flex items-center justify-between px-6 h-20 border-b border-gray-100">
@@ -108,7 +113,7 @@ const Navbar = () => {
               />
             </div>
             <div>
-              <div className="text-lg font-bold bg-gradient-to-r from-green-600 to-emerald-600 bg-clip-text text-transparent">
+              <div className="text-lg font-bold bg-linear-to-r from-green-600 to-emerald-600 bg-clip-text text-transparent">
                 SAMBHAV
               </div>
               <div className="text-xs text-gray-600 tracking-wider">
@@ -163,39 +168,3 @@ const Navbar = () => {
 };
 
 export default Navbar;
-
-/* ---------------- COMPONENTS ---------------- */
-
-const NavLink = ({
-  href,
-  children,
-}: {
-  href: string;
-  children: React.ReactNode;
-}) => (
-  <Link
-    href={href}
-    className="relative px-4 py-2 text-gray-700 font-medium hover:text-green-600 transition group"
-  >
-    {children}
-    <span className="absolute bottom-0 left-1/2 -translate-x-1/2 w-0 h-0.5 bg-gradient-to-r from-green-500 to-emerald-600 group-hover:w-3/4 transition-all duration-300 rounded-full" />
-  </Link>
-);
-
-const MobileNavLink = ({
-  href,
-  children,
-  onClick,
-}: {
-  href: string;
-  children: React.ReactNode;
-  onClick: () => void;
-}) => (
-  <Link
-    href={href}
-    onClick={onClick}
-    className="px-4 py-3 rounded-lg text-lg font-medium text-gray-700 hover:bg-gray-50 transition"
-  >
-    {children}
-  </Link>
-);
