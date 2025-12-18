@@ -1,10 +1,28 @@
 "use client";
 
-import { useState } from "react";
-import { Sparkles, Star } from "lucide-react";
+import { useState, useRef } from "react";
+import { Sparkles, Star, ChevronLeft, ChevronRight, ArrowRight } from "lucide-react";
 
 export default function ProductsPreview() {
   const [hoveredIndex, setHoveredIndex] = useState<number | null>(null);
+  const [activeIndex, setActiveIndex] = useState(0);
+  const scrollContainerRef = useRef<HTMLDivElement>(null);
+
+  const scroll = (direction: 'left' | 'right') => {
+    if (scrollContainerRef.current) {
+      const cardWidth = 340 + 24; // width + gap
+      const scrollAmount = direction === 'left' ? -cardWidth : cardWidth;
+      scrollContainerRef.current.scrollBy({ left: scrollAmount, behavior: 'smooth' });
+    }
+  };
+
+  const handleScroll = () => {
+    if (scrollContainerRef.current) {
+      const cardWidth = 340 + 24;
+      const index = Math.round(scrollContainerRef.current.scrollLeft / cardWidth);
+      setActiveIndex(index);
+    }
+  };
 
   const products = [
     {
@@ -95,23 +113,46 @@ export default function ProductsPreview() {
           </div>
         </div>
 
-        {/* Products Grid with Horizontal Scroll */}
-        <div className="relative">
-          <div className="flex gap-6 overflow-x-auto pb-8 snap-x snap-mandatory scrollbar-hide">
+        {/* Products Grid with Modern Carousel Controls */}
+        <div className="relative group/carousel">
+          {/* Navigation Buttons (Visible on Hover) */}
+          <button
+            onClick={() => scroll('left')}
+            className="hidden md:flex absolute left-0 top-1/2 -translate-y-1/2 -ml-5 z-20 p-3 rounded-full bg-white/80 backdrop-blur-md shadow-lg border border-primary-100 text-primary-800 opacity-0 group-hover/carousel:opacity-100 transition-all duration-300 hover:scale-110 hover:bg-white disabled:opacity-0 disabled:cursor-not-allowed"
+            disabled={activeIndex === 0}
+            aria-label="Scroll left"
+          >
+            <ChevronLeft className="w-6 h-6" />
+          </button>
+
+          <button
+            onClick={() => scroll('right')}
+            className="hidden md:flex absolute right-0 top-1/2 -translate-y-1/2 -mr-5 z-20 p-3 rounded-full bg-white/80 backdrop-blur-md shadow-lg border border-primary-100 text-primary-800 opacity-0 group-hover/carousel:opacity-100 transition-all duration-300 hover:scale-110 hover:bg-white disabled:opacity-0 disabled:cursor-not-allowed"
+            disabled={activeIndex >= products.length - 2} // Disable when near end
+            aria-label="Scroll right"
+          >
+            <ChevronRight className="w-6 h-6" />
+          </button>
+
+          <div
+            ref={scrollContainerRef}
+            onScroll={handleScroll}
+            className="flex gap-6 overflow-x-auto pb-12 pt-4 snap-x snap-mandatory scrollbar-hide px-4 scroll-smooth"
+          >
             {products.map((product, index) => (
               <div
                 key={index}
-                className="flex-none w-80 snap-start group"
+                className="flex-none w-[340px] snap-center group"
                 onMouseEnter={() => setHoveredIndex(index)}
                 onMouseLeave={() => setHoveredIndex(null)}
               >
-                <div className="relative h-[440px] rounded-3xl overflow-hidden transition-all duration-500 hover:scale-[1.02] hover:-translate-y-1">
+                <div className={`relative h-[480px] rounded-3xl overflow-hidden transition-all duration-500 hover:-translate-y-2 ${activeIndex === index ? 'scale-100 opacity-100' : 'scale-95 opacity-90'}`}>
                   {/* Glow Effect */}
                   <div className="absolute -inset-1 bg-gradient-to-br from-primary-300 via-primary-500 to-primary-600 rounded-3xl opacity-0 group-hover:opacity-40 blur-lg transition-opacity duration-500"></div>
 
                   <div className="relative h-full bg-white rounded-3xl shadow-lg group-hover:shadow-2xl overflow-hidden border border-primary-100 group-hover:border-primary-300/50 transition-all duration-500 flex flex-col">
                     {/* Image Container */}
-                    <div className="relative h-60 overflow-hidden shrink-0">
+                    <div className="relative h-64 overflow-hidden shrink-0">
                       <img
                         src={product.img}
                         alt={product.name}
@@ -149,18 +190,19 @@ export default function ProductsPreview() {
                       </p>
 
                       <div className="mt-auto">
-                        {/* Interactive Button */}
                         <button
                           className={`
                             w-full py-3.5 px-6 rounded-xl font-bold text-sm tracking-wide
-                            transition-all duration-300 transform shadow-sm
+                            transition-all duration-300 transform shadow-sm flex items-center justify-center gap-2
                             ${hoveredIndex === index
                               ? 'bg-gradient-to-r from-primary-600 to-primary-700 text-white shadow-lg shadow-primary-900/20 scale-[1.03]'
                               : 'bg-primary-50 text-primary-800 border border-primary-200 hover:bg-primary-100'
                             }
                           `}
                         >
-                          {hoveredIndex === index ? 'Explore Details →' : 'View Product'}
+                          {hoveredIndex === index ? (
+                            <>Explore Details <ArrowRight className="w-4 h-4" /></>
+                          ) : 'View Product'}
                         </button>
                       </div>
                     </div>
@@ -170,16 +212,25 @@ export default function ProductsPreview() {
             ))}
           </div>
 
-          {/* Enhanced Scroll Indicators */}
-          <div className="flex justify-center gap-2.5 mt-8">
+          {/* Enhanced Smart Indicators */}
+          <div className="flex justify-center gap-3 mt-8">
             {products.map((_, index) => (
               <button
                 key={index}
+                onClick={() => {
+                  if (scrollContainerRef.current) {
+                    const cardWidth = 340 + 24; // width + gap
+                    scrollContainerRef.current.scrollTo({
+                      left: index * cardWidth,
+                      behavior: 'smooth'
+                    });
+                  }
+                }}
                 className={`
-                  h-2 rounded-full transition-all duration-300
-                  ${index === 0
-                    ? 'bg-gradient-to-r from-primary-600 to-primary-700 w-12 shadow-md'
-                    : 'bg-primary-300 w-2 hover:bg-primary-400 hover:w-6'
+                  h-1.5 rounded-full transition-all duration-500 ease-out
+                  ${activeIndex === index
+                    ? 'bg-primary-600 w-12'
+                    : 'bg-primary-200 w-2 hover:bg-primary-300 hover:w-4'
                   }
                 `}
                 aria-label={`Go to product ${index + 1}`}
