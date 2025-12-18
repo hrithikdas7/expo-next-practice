@@ -73,11 +73,11 @@ const Navbar = () => {
               onClick={() => setMobileMenuOpen(true)}
               aria-label="Open menu"
             >
-              <div className="w-6 h-6 flex flex-col justify-center gap-1">
+              <span className="w-6 h-6 flex flex-col justify-center gap-1">
                 <span className="w-6 h-0.5 bg-current rounded-full" />
                 <span className="w-6 h-0.5 bg-current rounded-full" />
                 <span className="w-6 h-0.5 bg-current rounded-full" />
-              </div>
+              </span>
             </button>
           </div>
         </div>
