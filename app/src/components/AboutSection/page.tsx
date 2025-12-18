@@ -4,21 +4,21 @@ import { TrendingUp, Award } from 'lucide-react'
 
 const AboutSection = () => {
   return (
-    <section className="relative py-24 px-4 bg-white overflow-hidden">
+    <section className="relative py-16 px-4 bg-white overflow-hidden">
       {/* Decorative Background */}
       <div className="absolute top-0 left-0 w-full h-32 bg-gradient-to-b from-primary-50/50 to-transparent"></div>
       <div className="absolute bottom-0 right-0 w-96 h-96 bg-primary-100/30 rounded-full blur-3xl -z-10"></div>
 
       <div className="max-w-7xl mx-auto relative">
         {/* Section Header */}
-        <div className="text-center mb-16">
+        <div className="text-center mb-10">
           <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-primary-100 border border-primary-300 mb-4">
             <Award className="w-4 h-4 text-primary-700" />
             <span className="text-sm font-semibold text-primary-800 tracking-wide">ABOUT US</span>
           </div>
         </div>
 
-        <div className="grid md:grid-cols-2 gap-16 items-center">
+        <div className="grid md:grid-cols-2 gap-12 items-center">
           {/* Image Section */}
           <div className="relative group order-2 md:order-1">
             <div className="absolute -inset-3 bg-gradient-to-br from-primary-400 via-primary-500 to-primary-600 rounded-3xl opacity-20 blur-2xl group-hover:opacity-30 transition-opacity duration-500"></div>
@@ -85,7 +85,7 @@ const AboutSection = () => {
             </p>
 
             {/* Stats Cards */}
-            <div className="grid grid-cols-2 gap-6 mt-10">
+            <div className="grid grid-cols-2 gap-6 mt-8">
               <div className="relative group/stat">
                 <div className="absolute -inset-1 bg-gradient-to-br from-primary-500 to-primary-600 rounded-xl opacity-0 group-hover/stat:opacity-10 blur transition-opacity"></div>
                 <div className="relative bg-gradient-to-br from-primary-50 to-white p-6 rounded-xl border-2 border-primary-200 shadow-md hover:shadow-lg transition-shadow">

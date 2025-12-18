@@ -84,14 +84,14 @@ export default function ProductsPreview() {
   ];
 
   return (
-    <section className="relative py-24 px-4 bg-gradient-to-b from-white via-primary-50 to-primary-100 overflow-hidden">
+    <section className="relative py-16 px-4 bg-gradient-to-b from-white via-primary-50 to-primary-100 overflow-hidden">
       {/* Decorative Background Elements */}
       <div className="absolute top-0 right-0 w-96 h-96 bg-primary-200/20 rounded-full blur-3xl"></div>
       <div className="absolute bottom-0 left-0 w-80 h-80 bg-primary-300/20 rounded-full blur-3xl"></div>
 
       <div className="max-w-7xl mx-auto relative">
         {/* Header Section */}
-        <div className="mb-16 text-center">
+        <div className="mb-10 text-center">
           <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-primary-100 border border-primary-300 mb-6">
             <Sparkles className="w-4 h-4 text-primary-600" />
             <span className="text-sm font-semibold text-primary-800 tracking-wide">PREMIUM EXPORTS</span>
@@ -146,13 +146,13 @@ export default function ProductsPreview() {
                 onMouseEnter={() => setHoveredIndex(index)}
                 onMouseLeave={() => setHoveredIndex(null)}
               >
-                <div className={`relative h-[480px] rounded-3xl overflow-hidden transition-all duration-500 hover:-translate-y-2 ${activeIndex === index ? 'scale-100 opacity-100' : 'scale-95 opacity-90'}`}>
+                <div className={`relative h-[440px] rounded-3xl overflow-hidden transition-all duration-500 hover:-translate-y-2 ${activeIndex === index ? 'scale-100 opacity-100' : 'scale-95 opacity-90'}`}>
                   {/* Glow Effect */}
                   <div className="absolute -inset-1 bg-gradient-to-br from-primary-300 via-primary-500 to-primary-600 rounded-3xl opacity-0 group-hover:opacity-40 blur-lg transition-opacity duration-500"></div>
 
                   <div className="relative h-full bg-white rounded-3xl shadow-lg group-hover:shadow-2xl overflow-hidden border border-primary-100 group-hover:border-primary-300/50 transition-all duration-500 flex flex-col">
                     {/* Image Container */}
-                    <div className="relative h-64 overflow-hidden shrink-0">
+                    <div className="relative h-56 overflow-hidden shrink-0">
                       <img
                         src={product.img}
                         alt={product.name}
@@ -192,7 +192,7 @@ export default function ProductsPreview() {
                       <div className="mt-auto">
                         <button
                           className={`
-                            w-full py-3.5 px-6 rounded-xl font-bold text-sm tracking-wide
+                            w-full py-3 px-5 rounded-xl font-bold text-sm tracking-wide
                             transition-all duration-300 transform shadow-sm flex items-center justify-center gap-2
                             ${hoveredIndex === index
                               ? 'bg-gradient-to-r from-primary-600 to-primary-700 text-white shadow-lg shadow-primary-900/20 scale-[1.03]'
@@ -240,8 +240,8 @@ export default function ProductsPreview() {
         </div>
 
         {/* Call to Action */}
-        <div className="mt-16 text-center">
-          <button className="group px-10 py-5 rounded-full font-bold text-lg bg-gradient-to-r from-primary-700 to-primary-800 text-white shadow-xl hover:shadow-2xl hover:shadow-primary-900/30 transform hover:scale-105 transition-all duration-300 ring-4 ring-primary-100 overflow-hidden relative">
+        <div className="mt-10 text-center">
+          <button className="group px-8 py-3.5 rounded-full font-bold text-base bg-gradient-to-r from-primary-700 to-primary-800 text-white shadow-xl hover:shadow-2xl hover:shadow-primary-900/30 transform hover:scale-105 transition-all duration-300 ring-4 ring-primary-100 overflow-hidden relative">
             <span className="relative z-10 flex items-center gap-3">
               View All Products
               <svg

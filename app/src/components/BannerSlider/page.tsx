@@ -87,10 +87,10 @@ const BannerSlider = () => {
           </p>
 
           <div className="flex gap-4 justify-center pt-4">
-            <button className="px-10 py-4 rounded-full font-bold text-lg bg-gradient-to-r from-primary-500 to-primary-600 hover:scale-105 transition shadow-xl hover:shadow-2xl">
+            <button className="px-8 py-3 rounded-full font-bold text-base bg-gradient-to-r from-primary-500 to-primary-600 hover:scale-105 transition shadow-lg hover:shadow-xl">
               Explore Products
             </button>
-            <button className="px-10 py-4 rounded-full font-bold text-lg bg-white/10 border border-white/30 hover:bg-white/20 transition">
+            <button className="px-8 py-3 rounded-full font-bold text-base bg-white/10 border border-white/30 hover:bg-white/20 transition">
               Contact Us
             </button>
           </div>
