@@ -122,7 +122,7 @@ const Navbar = () => {
           {/* CLOSE BUTTON */}
           <button
             onClick={() => setMobileMenuOpen(false)}
-            className="p-2 rounded-lg text-foreground/70 hover:bg-primary-100 hover:text-primary-600 transition"
+            className="p-2 rounded-lg text-foreground/70 text-primary-800 hover:bg-primary-100  transition"
             aria-label="Close menu"
           >
             <X size={26} />
