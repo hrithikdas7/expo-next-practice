@@ -26,7 +26,7 @@ export default function WhyChooseUs() {
     const [openIndex, setOpenIndex] = useState<number>(0);
 
     return (
-        <section className="relative w-full bg-primary-50 py-20 px-4 overflow-hidden">
+        <section className="relative w-full bg-primary-50 py-12 px-4 overflow-hidden">
             {/* Decorative Background Elements */}
             <div className="absolute top-0 right-0 w-96 h-96 bg-primary-100/40 rounded-full blur-3xl -z-10 translate-x-1/3 -translate-y-1/3"></div>
             <div className="absolute bottom-0 left-0 w-80 h-80 bg-primary-200/30 rounded-full blur-3xl -z-10 -translate-x-1/3 translate-y-1/3"></div>
@@ -57,8 +57,8 @@ export default function WhyChooseUs() {
                                 <div
                                     key={index}
                                     className={`group rounded-xl border transition-all duration-300 overflow-hidden ${isOpen
-                                            ? "bg-white border-primary-200 shadow-lg shadow-primary-900/5"
-                                            : "bg-white/60 border-transparent hover:bg-white hover:border-primary-100"
+                                        ? "bg-white border-primary-200 shadow-lg shadow-primary-900/5"
+                                        : "bg-white/60 border-transparent hover:bg-white hover:border-primary-100"
                                         }`}
                                 >
                                     <button

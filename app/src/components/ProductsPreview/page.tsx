@@ -84,7 +84,7 @@ export default function ProductsPreview() {
   ];
 
   return (
-    <section className="relative py-16 px-4 bg-gradient-to-b from-white via-primary-50 to-primary-100 overflow-hidden">
+    <section className="relative py-12 px-4 bg-gradient-to-b from-white via-primary-50 to-primary-100 overflow-hidden">
       {/* Decorative Background Elements */}
       <div className="absolute top-0 right-0 w-96 h-96 bg-primary-200/20 rounded-full blur-3xl"></div>
       <div className="absolute bottom-0 left-0 w-80 h-80 bg-primary-300/20 rounded-full blur-3xl"></div>

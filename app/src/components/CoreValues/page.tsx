@@ -36,7 +36,7 @@ const values = [
 
 const CoreValues = () => {
     return (
-        <section className="py-24 bg-primary-50 relative overflow-hidden">
+        <section className="py-16 bg-primary-50 relative overflow-hidden">
             {/* Decorative Background Pattern */}
             <div className="absolute inset-0 opacity-5" style={{ backgroundImage: 'radial-gradient(#C89A3D 1px, transparent 1px)', backgroundSize: '30px 30px' }}></div>
 

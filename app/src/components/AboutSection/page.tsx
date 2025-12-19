@@ -4,7 +4,7 @@ import { TrendingUp, Award } from 'lucide-react'
 
 const AboutSection = () => {
   return (
-    <section className="relative py-16 px-4 bg-white overflow-hidden">
+    <section className="relative py-12 px-4 bg-white overflow-hidden">
       {/* Decorative Background */}
       <div className="absolute top-0 left-0 w-full h-32 bg-gradient-to-b from-primary-50/50 to-transparent"></div>
       <div className="absolute bottom-0 right-0 w-96 h-96 bg-primary-100/30 rounded-full blur-3xl -z-10"></div>

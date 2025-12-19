@@ -31,7 +31,7 @@ const certifications = [
 
 const Certifications: React.FC = () => {
     return (
-        <section className="w-full bg-primary-50 py-20 border-t border-primary-100">
+        <section className="w-full bg-primary-50 py-12 border-t border-primary-100">
             <div className="max-w-7xl mx-auto px-6">
                 <div className="text-center mb-12">
                     <span className="inline-block py-1 px-3 rounded-full bg-white border border-primary-100 text-primary-700 text-xs font-bold tracking-wider uppercase mb-3">

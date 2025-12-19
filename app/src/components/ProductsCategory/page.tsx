@@ -47,7 +47,7 @@ const categories = [
 
 export default function ProductsCategory() {
     return (
-        <section className="py-20 pb-32 px-6 bg-gradient-to-b from-white to-primary-50">
+        <section className="py-12 pb-20 px-6 bg-gradient-to-b from-white to-primary-50">
             <div className="max-w-7xl mx-auto">
                 <div className="text-center mb-16">
                     <h2 className="text-4xl md:text-5xl font-bold text-primary-900 mb-4 font-serif">

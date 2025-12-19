@@ -32,7 +32,7 @@ const pillars = [
 
 const OurPillarsAndContact: React.FC = () => {
     return (
-        <section className="w-full bg-white py-24 relative overflow-hidden">
+        <section className="w-full bg-white py-16 relative overflow-hidden">
             <div className="absolute top-0 right-0 w-[500px] h-[500px] bg-primary-100/50 rounded-full blur-3xl -z-10 translate-x-1/2 -translate-y-1/2"></div>
 
             <div className="max-w-7xl mx-auto px-6">

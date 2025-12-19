@@ -3,7 +3,7 @@ import { Phone, ArrowRight } from "lucide-react";
 
 const ContactCTA: React.FC = () => {
     return (
-        <section className="w-full bg-white py-20 border-t border-gray-100">
+        <section className="w-full bg-white py-12 border-t border-gray-100">
             <div className="max-w-7xl mx-auto px-6 grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
 
                 {/* Left */}
@@ -26,7 +26,7 @@ const ContactCTA: React.FC = () => {
                         </p>
 
                         <div className="mt-4 inline-flex items-center gap-3 text-primary-700 bg-primary-50 px-5 py-3 rounded-xl border border-primary-100 shadow-sm hover:shadow-md transition-shadow">
-                            <div className="p-2 bg-white rounded-full text-primary-600">
+                            <div className="p-2 bg-white rounded-full text-primary-600 relative">
                                 <Phone size={18} fill="currentColor" className="opacity-20" />
                                 <Phone size={18} className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2" />
                             </div>
