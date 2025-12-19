@@ -1,4 +1,5 @@
 import Link from "next/link";
+import { usePathname } from "next/navigation";
 
 
 export const MobileNavLink = ({
@@ -9,12 +10,20 @@ export const MobileNavLink = ({
   href: string;
   children: React.ReactNode;
   onClick: () => void;
-}) => (
-  <Link
-    href={href}
-    onClick={onClick}
-    className="px-4 py-3 rounded-lg text-lg font-medium text-primary-800 hover:bg-primary-50 hover:text-primary-700 transition"
-  >
-    {children}
-  </Link>
-);
+}) => {
+  const pathname = usePathname();
+  const isActive = pathname === href;
+
+  return (
+    <Link
+      href={href}
+      onClick={onClick}
+      className={`px-4 py-3 rounded-lg text-lg font-medium transition ${isActive
+        ? "bg-primary-50 text-primary-700 shadow-sm border border-primary-100"
+        : "text-primary-800 hover:bg-primary-50 hover:text-primary-700"
+        }`}
+    >
+      {children}
+    </Link>
+  );
+};
