@@ -1,9 +1,9 @@
-import BannerSlider from "./src/components/BannerSlider/page";
-import AboutSection from "./src/components/AboutSection/page";
-import ProductsPreview from "./src/components/ProductsPreview/page";
-import WhyChooseUs from "./src/components/whyChoose/page";
-import OurPillarsAndContact from "./src/components/Ourpillars/page";
-import Certifications from "./src/components/certifications/page";
+import BannerSlider from "./src/components/BannerSlider/BannerSlider";
+import AboutSection from "./src/components/AboutSection/AboutSection";
+import ProductsPreview from "./src/components/ProductsPreview/ProductsPreview";
+import WhyChooseUs from "./src/components/whyChoose/WhyChooseUs";
+import OurPillarsAndContact from "./src/components/Ourpillars/OurPillars";
+import Certifications from "./src/components/certifications/Certifications";
 
 export default function Home() {
   return (
