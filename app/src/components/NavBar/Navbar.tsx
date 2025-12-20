@@ -1,6 +1,6 @@
 "use client";
 
-import { Globe, X } from "lucide-react";
+import { Globe, Menu, X } from "lucide-react";
 import Image from "next/image";
 import React, { useState, useEffect } from "react";
 import Link from "next/link";
@@ -70,67 +70,27 @@ const Navbar = () => {
             {/* MOBILE MENU BUTTON */}
             <button
               className="md:hidden p-2 rounded-lg text-primary-800 hover:bg-primary-100 hover:text-primary-900 transition-all hover:scale-105"
-              onClick={() => setMobileMenuOpen(true)}
-              aria-label="Open menu"
+              onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
+              aria-label={mobileMenuOpen ? "Close menu" : "Open menu"}
             >
-              <span className="w-6 h-6 flex flex-col justify-center gap-1">
-                <span className="w-6 h-0.5 bg-current rounded-full" />
-                <span className="w-6 h-0.5 bg-current rounded-full" />
-                <span className="w-6 h-0.5 bg-current rounded-full" />
-              </span>
+              {mobileMenuOpen ? (
+                <X size={28} />
+              ) : (
+                <Menu size={28} />
+              )}
             </button>
           </div>
         </div>
       </nav>
 
-      {/* OVERLAY */}
+      {/* MOBILE DROPDOWN MENU */}
       <div
-        className={`fixed inset-0 z-40 transition-all duration-300 ${mobileMenuOpen
-          ? "bg-black/50 backdrop-blur-sm opacity-100"
-          : "pointer-events-none opacity-0"
-          }`}
-        onClick={() => setMobileMenuOpen(false)}
-      />
-
-      {/* MOBILE DRAWER */}
-      <div
-        className={`fixed inset-0 z-50 bg-white transform transition-transform duration-300 ease-out ${mobileMenuOpen ? "translate-x-0" : "translate-x-full"
+        className={`fixed top-20 left-0 w-full bottom-0 z-40 bg-white shadow-xl border-t border-gray-100 flex flex-col justify-between transform transition-all duration-300 ease-out origin-top ${mobileMenuOpen
+          ? "translate-y-0 opacity-100 visible"
+          : "-translate-y-4 opacity-0 invisible"
           }`}
       >
-        {/* MOBILE HEADER */}
-        <div className="flex items-center justify-between px-6 h-20 border-b border-gray-100">
-          <div className="flex items-center gap-3">
-            <div className="shadow-md rounded-full overflow-hidden">
-              <Image
-                src="/logo.png"
-                alt="Sambhav Exporter Logo"
-                width={44}
-                height={44}
-                className="object-cover"
-              />
-            </div>
-            <div>
-              <div className="text-lg font-bold text-primary-800">
-                SAMBHAV
-              </div>
-              <div className="text-xs text-primary-600 tracking-wider">
-                EXPORTER
-              </div>
-            </div>
-          </div>
-
-          {/* CLOSE BUTTON */}
-          <button
-            onClick={() => setMobileMenuOpen(false)}
-            className="p-2 rounded-lg text-foreground/70 text-primary-800 hover:bg-primary-100  transition"
-            aria-label="Close menu"
-          >
-            <X size={26} />
-          </button>
-        </div>
-
-        {/* MOBILE LINKS */}
-        <div className="flex flex-col px-6 pt-8 gap-2">
+        <div className="flex flex-col px-6 py-6 gap-2 overflow-y-auto">
           <MobileNavLink href="/" onClick={() => setMobileMenuOpen(false)}>
             Home
           </MobileNavLink>
@@ -155,7 +115,7 @@ const Navbar = () => {
         </div>
 
         {/* MOBILE FOOTER */}
-        <div className="absolute bottom-6 left-0 w-full px-6 text-center text-xs text-gray-500 border-t border-gray-100 pt-4">
+        <div className="px-6 pb-6 text-center text-xs text-gray-500 border-t border-gray-100 pt-4 bg-white">
           © {new Date().getFullYear()} Sambhav Exporter
           <div className="mt-1 text-gray-400">All Rights Reserved</div>
         </div>

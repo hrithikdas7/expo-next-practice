@@ -23,7 +23,7 @@ export const MobileNavLink = ({
         : "text-primary-800 hover:bg-primary-50 hover:text-primary-700"
         }`}
     >
-      {isActive && <span className="w-1.5 h-1.5 rounded-full bg-primary-600 mr-2" />}
+
       {children}
     </Link>
   );
