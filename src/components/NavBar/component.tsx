@@ -4,8 +4,8 @@ import { Globe, X } from "lucide-react";
 import Image from "next/image";
 import React, { useState, useEffect } from "react";
 import Link from "next/link";
-import { NavLink } from "../Navlink/page";
-import { MobileNavLink } from "../MobNavLink/page";
+import NavLink from "../Navlink/component";
+import MobileNavLink from "../MobNavLink/component";
 
 const Navbar = () => {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);

@@ -1,7 +1,8 @@
+"use client"
 import Link from "next/link";
 import { usePathname } from "next/navigation";
 
-export const NavLink = ({
+const NavLink = ({
   href,
   children,
 }: {
@@ -29,3 +30,5 @@ export const NavLink = ({
     </Link>
   );
 };
+
+export default NavLink;

@@ -1,8 +1,9 @@
+"use client"
 import Link from "next/link";
 import { usePathname } from "next/navigation";
 
 
-export const MobileNavLink = ({
+const MobileNavLink = ({
   href,
   children,
   onClick,
@@ -28,3 +29,5 @@ export const MobileNavLink = ({
     </Link>
   );
 };
+
+export default MobileNavLink;

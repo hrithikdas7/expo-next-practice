@@ -1,7 +1,7 @@
 import React from 'react';
-import AboutUsGrid from '../src/components/AboutUsGrid/page';
-import TrustedPartner from '../src/components/TrustedPartner/page';
-import CoreValues from '../src/components/CoreValues/page';
+import AboutUsGrid from '@/src/components/AboutUsGrid/component';
+import TrustedPartner from '@/src/components/TrustedPartner/component';
+import CoreValues from '@/src/components/CoreValues/component';
 
 // Using a simple header for now to avoid reusing the full Home Slider which might be confusing
 const AboutHeader = () => (

@@ -1,6 +1,6 @@
-import ContactHero from "../src/components/ContactHero/page";
-import ContactContent from "../src/components/ContactContent/page";
-import ContactMap from "../src/components/ContactMap/page";
+import ContactHero from "@/src/components/ContactHero/component";
+import ContactContent from "@/src/components/ContactContent/component";
+import ContactMap from "@/src/components/ContactMap/component";
 
 export default function ContactUs() {
   return (

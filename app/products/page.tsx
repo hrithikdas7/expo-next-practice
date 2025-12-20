@@ -1,6 +1,6 @@
-import ProductsHero from "../src/components/ProductsHero/page";
-import ProductsIntro from "../src/components/ProductsIntro/page";
-import ProductsCategory from "../src/components/ProductsCategory/page";
+import ProductsHero from "@/src/components/ProductsHero/component";
+import ProductsIntro from "@/src/components/ProductsIntro/component";
+import ProductsCategory from "@/src/components/ProductsCategory/component";
 
 export default function ProductsPage() {
   return (
