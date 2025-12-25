@@ -1,6 +1,7 @@
 import React from 'react'
-import Image from 'next/image'
-import { TrendingUp, Award } from 'lucide-react'
+import Image from "next/image"
+import { TrendingUp, Award } from "lucide-react"
+import Link from "next/link"
 
 const AboutSection = () => {
   return (
@@ -65,6 +66,13 @@ const AboutSection = () => {
             <p className="text-lg text-gray-700 leading-relaxed mb-6">
               For over five decades and three generations, our family has lived and worked alongside the land, cultivating onions and supplying them across domestic markets. What began as a livelihood slowly became a legacy — built on early mornings in the fields, honest trade, and an unwavering belief in quality.
             </p>
+
+            <div className="mb-8">
+              <Link href="/about-us" className="inline-flex items-center text-primary-600 font-bold hover:text-primary-800 transition-colors group">
+                Read Our Full Story
+                <span className="ml-2 transform group-hover:translate-x-1 transition-transform">→</span>
+              </Link>
+            </div>
 
             <p className="text-lg text-gray-700 leading-relaxed mb-6">
               Today, the fourth generation steps forward with a larger dream. With respect for our past and a vision for the future, we are expanding beyond borders to share India’s finest produce with the world. Along with onions, we proudly export <span className="font-semibold text-primary-700">grapes, green chillies, and capsicum</span>, grown and sourced with the same care that defined our journey from the beginning.

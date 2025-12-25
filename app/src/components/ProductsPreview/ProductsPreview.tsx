@@ -2,6 +2,7 @@
 
 import { useState, useRef } from "react";
 import { Sparkles, Star, ChevronLeft, ChevronRight, ArrowRight } from "lucide-react";
+import Link from "next/link";
 
 import { products } from "../../data/products";
 
@@ -185,21 +186,26 @@ export default function ProductsPreview() {
         {/* Call to Action */}
         <div className="mt-10 text-center">
           <button className="group px-8 py-3.5 rounded-full font-bold text-base bg-gradient-to-r from-primary-700 to-primary-800 text-white shadow-xl hover:shadow-2xl hover:shadow-primary-900/30 transform hover:scale-105 transition-all duration-300 ring-4 ring-primary-100 overflow-hidden relative">
-            <span className="relative z-10 flex items-center gap-3">
-              View All Products
-              <svg
-                className="w-5 h-5 group-hover:translate-x-1 transition-transform"
-                fill="none"
-                stroke="currentColor"
-                viewBox="0 0 24 24"
-              >
-                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2.5} d="M17 8l4 4m0 0l-4 4m4-4H3" />
-              </svg>
-            </span>
+
+            <Link href="/products">
+              <span className="relative z-10 flex items-center gap-3">
+                View All Products
+                <svg
+                  className="w-5 h-5 group-hover:translate-x-1 transition-transform"
+                  fill="none"
+                  stroke="currentColor"
+                  viewBox="0 0 24 24"
+                >
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2.5} d="M17 8l4 4m0 0l-4 4m4-4H3" />
+                </svg>
+              </span>
+            </Link>
             {/* Shimmer effect */}
             <span className="absolute inset-0 -translate-x-full group-hover:translate-x-full transition-transform duration-1000 bg-gradient-to-r from-transparent via-white/20 to-transparent skew-x-12"></span>
           </button>
         </div>
+
+
       </div>
     </section>
   );

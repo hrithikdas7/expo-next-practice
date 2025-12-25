@@ -2,6 +2,7 @@
 
 import { ChevronLeft, ChevronRight } from "lucide-react";
 import React, { useState, useEffect } from "react";
+import Link from "next/link";
 
 const BannerSlider = () => {
   const [currentSlide, setCurrentSlide] = useState(0);
@@ -115,12 +116,16 @@ const BannerSlider = () => {
                     : "opacity-0 translate-y-8"
                     }`}
                 >
-                  <button className="px-8 py-3 rounded-full font-bold text-base bg-gradient-to-r from-primary-500 to-primary-600 hover:scale-105 transition shadow-lg hover:shadow-xl">
-                    Explore Products
-                  </button>
-                  <button className="px-8 py-3 rounded-full font-bold text-base bg-white/10 border border-white/30 hover:bg-white/20 transition">
-                    Contact Us
-                  </button>
+                  <Link href="/products">
+                    <button className="px-8 py-3 rounded-full font-bold text-base bg-gradient-to-r from-primary-500 to-primary-600 hover:scale-105 transition shadow-lg hover:shadow-xl cursor-pointer">
+                      Explore Products
+                    </button>
+                  </Link>
+                  <Link href="/contact-us">
+                    <button className="px-8 py-3 rounded-full font-bold text-base bg-white/10 border border-white/30 hover:bg-white/20 transition cursor-pointer">
+                      Contact Us
+                    </button>
+                  </Link>
                 </div>
               </div>
             </div>
