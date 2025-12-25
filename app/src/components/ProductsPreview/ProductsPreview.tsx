@@ -26,59 +26,31 @@ export default function ProductsPreview() {
 
   const products = [
     {
-      name: 'Assorted Spices',
-      category: 'Spices',
-      description: 'Premium blend of aromatic spices',
-      img: 'https://images.unsplash.com/photo-1578428295193-be8ecc768ea5?q=80&w=735&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D',
-      featured: true
-    },
-    {
-      name: 'Fresh Turmeric',
-      category: 'Spices',
-      description: 'Organic, golden turmeric roots',
-      img: 'https://plus.unsplash.com/premium_photo-1726862790171-0d6208559224?q=80&w=1470&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D',
-      featured: true
-    },
-    {
       name: 'Red Onions',
       category: 'Vegetables',
-      description: 'Farm-fresh red onions',
+      description: 'Farm-fresh red onions known for quality and consistency.',
       img: 'https://images.unsplash.com/photo-1618512496248-a07fe83aa8cb?w=800&q=80',
+      featured: true
+    },
+    {
+      name: 'Fresh Grapes',
+      category: 'Fruits',
+      description: 'Sweet, export-grade grapes from fertile regions.',
+      img: 'https://images.unsplash.com/photo-1596363805874-4b470bfb04d1?q=80&w=2070&auto=format&fit=crop',
+      featured: true
+    },
+    {
+      name: 'Green Chillies',
+      category: 'Vegetables',
+      description: 'Vibrant, spicy green chillies with strong aroma.',
+      img: 'https://images.unsplash.com/photo-1567157567761-9f93ba4f4044?q=80&w=2070&auto=format&fit=crop',
       featured: false
     },
     {
-      name: 'Coriander Seeds',
-      category: 'Seeds',
-      description: 'Handpicked coriander seeds',
-      img: 'https://images.unsplash.com/photo-1508748169069-82590c9f26e6?q=80&w=1374&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D',
-      featured: false
-    },
-    {
-      name: 'Black Pepper',
-      category: 'Spices',
-      description: 'Bold and aromatic flavor',
-      img: 'https://images.unsplash.com/photo-1655662844262-7bb61527c0d8?q=80&w=627&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D',
-      featured: false
-    },
-    {
-      name: 'Cumin Seeds',
-      category: 'Seeds',
-      description: 'Pure, earthy cumin',
-      img: 'https://images.unsplash.com/photo-1676619357571-b4f086f81299?q=80&w=687&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D',
-      featured: false
-    },
-    {
-      name: 'Sesame Seeds',
-      category: 'Seeds',
-      description: 'Premium quality sesame',
-      img: 'https://plus.unsplash.com/premium_photo-1674654419404-667fcdd0fe13?q=80&w=1470&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D',
-      featured: false
-    },
-    {
-      name: 'Pulses',
-      category: 'Grains',
-      description: 'Nutritious mixed pulses',
-      img: 'https://plus.unsplash.com/premium_photo-1664007711018-d7cb92e664b1?q=80&w=1471&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D',
+      name: 'Capsicum',
+      category: 'Vegetables',
+      description: 'Crisp, rich-colored capsicums of uniform size.',
+      img: 'https://images.unsplash.com/photo-1563565375-f3fdfdbefa83?q=80&w=1974&auto=format&fit=crop',
       featured: false
     }
   ];

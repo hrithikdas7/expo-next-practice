@@ -53,9 +53,8 @@ const AboutSection = () => {
 
           {/* Content Section */}
           <div className="order-1 md:order-2">
-            <h2 className="text-4xl md:text-5xl font-black text-primary-900 mb-6 leading-tight">
-              Delivering Quality,
-              <span className="block text-primary-600 mt-1">Building Global Connections</span>
+            <h2 className="text-3xl md:text-5xl font-black text-primary-900 mb-6 leading-tight">
+              Sambhav Export is a story rooted in the soil.
             </h2>
 
             <div className="flex items-center gap-3 mb-8">
@@ -64,24 +63,15 @@ const AboutSection = () => {
             </div>
 
             <p className="text-lg text-gray-700 leading-relaxed mb-6">
-              At{" "}
-              <span className="font-bold text-primary-700">
-                Sambhav Export
-              </span>
-              , we believe in offering more than products — we deliver{" "}
-              <span className="font-semibold text-primary-800">freshness</span>,{" "}
-              <span className="font-semibold text-primary-800">purity</span>, and{" "}
-              <span className="font-semibold text-primary-800">trust</span>.
+              For over five decades and three generations, our family has lived and worked alongside the land, cultivating onions and supplying them across domestic markets. What began as a livelihood slowly became a legacy — built on early mornings in the fields, honest trade, and an unwavering belief in quality.
             </p>
 
-            <p className="text-base text-gray-600 leading-relaxed mb-8">
-              With a vision to supply India's finest{" "}
-              <span className="font-semibold text-primary-700">
-                Onions, Spices, Moringa Powder, Pulses, Cumin Seeds, Turmeric,
-                Black Pepper, and Sesame Seeds
-              </span>{" "}
-              to global markets, we ensure every shipment reflects{" "}
-              <span className="font-semibold text-gray-700">quality</span> and authenticity.
+            <p className="text-lg text-gray-700 leading-relaxed mb-6">
+              Today, the fourth generation steps forward with a larger dream. With respect for our past and a vision for the future, we are expanding beyond borders to share India’s finest produce with the world. Along with onions, we proudly export <span className="font-semibold text-primary-700">grapes, green chillies, and capsicum</span>, grown and sourced with the same care that defined our journey from the beginning.
+            </p>
+
+            <p className="text-lg text-gray-700 leading-relaxed mb-8">
+              At Sambhav Export, every shipment carries more than produce — it carries generations of <span className="font-semibold text-primary-800">trust, hard work, and passion</span> from our fields to global markets.
             </p>
 
             {/* Stats Cards */}

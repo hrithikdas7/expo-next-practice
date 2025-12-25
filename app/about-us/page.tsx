@@ -1,5 +1,6 @@
 import React from 'react';
 import AboutUsGrid from '../src/components/AboutUsGrid/AboutUsGrid';
+import AboutProducts from '../src/components/AboutProducts/AboutProducts';
 import TrustedPartner from '../src/components/TrustedPartner/TrustedPartner';
 import CoreValues from '../src/components/CoreValues/CoreValues';
 
@@ -24,6 +25,7 @@ const Aboutus = () => {
     <>
       <AboutHeader />
       <AboutUsGrid />
+      <AboutProducts />
       <TrustedPartner />
       <CoreValues />
     </>

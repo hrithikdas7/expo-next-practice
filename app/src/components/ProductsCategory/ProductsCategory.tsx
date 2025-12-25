@@ -9,39 +9,19 @@ const categories = [
         description: "Premium quality Nashik Red Onions known for pungency."
     },
     {
-        name: "Spices",
-        image: "https://images.unsplash.com/photo-1596040033229-a9821ebd058d?q=80&w=2070&auto=format&fit=crop",
-        description: "Aromatic authentic Indian spices for global kitchens."
+        name: "Fresh Grapes",
+        image: "https://images.unsplash.com/photo-1596363805874-4b470bfb04d1?q=80&w=2070&auto=format&fit=crop",
+        description: "Sweet, juicy, and export-quality grapes."
     },
     {
-        name: "Moringa Powder",
-        image: "https://images.unsplash.com/photo-1655662844262-7bb61527c0d8?q=80&w=627&auto=format&fit=crop", // Placeholder (using spice image, real one needed)
-        description: "Nutrient-rich Organic Moringa Leaf Powder."
+        name: "Green Chillies",
+        image: "https://images.unsplash.com/photo-1567157567761-9f93ba4f4044?q=80&w=2070&auto=format&fit=crop",
+        description: "Fresh green chillies with high heat and aroma."
     },
     {
-        name: "Pulses",
-        image: "https://plus.unsplash.com/premium_photo-1664007711018-d7cb92e664b1?q=80&w=1471&auto=format&fit=crop",
-        description: "High-protein Toor Dal, Chana Dal, and Moong Dal."
-    },
-    {
-        name: "Cumin Seeds",
-        image: "https://images.unsplash.com/photo-1676619357571-b4f086f81299?q=80&w=687&auto=format&fit=crop",
-        description: "High-oil content Jeera with distinct aroma."
-    },
-    {
-        name: "Turmeric",
-        image: "https://plus.unsplash.com/premium_photo-1726862790171-0d6208559224?q=80&w=1470&auto=format&fit=crop",
-        description: "High curcumin content Salem and Nizamabad Turmeric."
-    },
-    {
-        name: "Black Pepper",
-        image: "https://images.unsplash.com/photo-1528750997573-59b8b6ee58cd?q=80&w=1476",
-        description: "Bold Black Pepper known as 'Black Gold'."
-    },
-    {
-        name: "Sesame Seeds",
-        image: "https://plus.unsplash.com/premium_photo-1674654419404-667fcdd0fe13?q=80&w=1470&auto=format&fit=crop",
-        description: "Uniform white and black sesame seeds."
+        name: "Capsicum",
+        image: "https://images.unsplash.com/photo-1563565375-f3fdfdbefa83?q=80&w=1974&auto=format&fit=crop",
+        description: "Fresh, crisp capsicum with vibrant color."
     }
 ];
 
