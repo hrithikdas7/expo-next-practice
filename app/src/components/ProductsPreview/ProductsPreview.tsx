@@ -36,14 +36,14 @@ export default function ProductsPreview() {
       name: 'Fresh Grapes',
       category: 'Fruits',
       description: 'Sweet, export-grade grapes from fertile regions.',
-      img: 'https://images.unsplash.com/photo-1596363805874-4b470bfb04d1?q=80&w=2070&auto=format&fit=crop',
+      img: 'https://images.unsplash.com/photo-1631299106224-aae61c217164?q=80&w=687&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D',
       featured: true
     },
     {
       name: 'Green Chillies',
       category: 'Vegetables',
       description: 'Vibrant, spicy green chillies with strong aroma.',
-      img: 'https://images.unsplash.com/photo-1567157567761-9f93ba4f4044?q=80&w=2070&auto=format&fit=crop',
+      img: 'https://images.unsplash.com/photo-1524593410820-38510f580a77?q=80&w=1170&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D',
       featured: false
     },
     {

@@ -24,7 +24,7 @@ const AboutSection = () => {
             <div className="absolute -inset-3 bg-gradient-to-br from-primary-400 via-primary-500 to-primary-600 rounded-3xl opacity-20 blur-2xl group-hover:opacity-30 transition-opacity duration-500"></div>
             <div className="relative w-full h-[450px] rounded-3xl overflow-hidden shadow-2xl border-4 border-white">
               <Image
-                src="/about.png"
+                src="https://images.unsplash.com/photo-1625246333195-78d9c38ad449?q=80&w=1170&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
                 alt="Premium Indian Spices and Products"
                 fill
                 className="object-cover transform group-hover:scale-105 transition-transform duration-700"

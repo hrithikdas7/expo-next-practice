@@ -97,7 +97,7 @@ export default function WhyChooseUs() {
                         <div className="relative rounded-3xl overflow-hidden shadow-2xl border-4 border-white aspect-[4/5] group">
                             <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent z-10 opactiy-60"></div>
                             <img
-                                src="/why-choose-us.png"
+                                src="https://images.unsplash.com/vector-1761644984492-4fd9e56858d2?q=80&w=1212&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
                                 alt="Why Choose Sambhav Export"
                                 className="w-full h-full object-cover transform transition-transform duration-700 group-hover:scale-105"
                             />

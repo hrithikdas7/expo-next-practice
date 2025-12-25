@@ -11,9 +11,9 @@ const BannerSlider = () => {
     {
       title: "FRESHNESS. PURITY. QUALITY.",
       subtitle: "Delivering Fresh, Pure & Premium",
-      description: "Onions, Spices, Pulses, and Seeds Worldwide.",
+      description: "Onions, Capsicums,Green chillies and Grapes Worldwide.",
       image:
-        "https://images.unsplash.com/photo-1606914469633-bd39206ea739?q=80&w=1470",
+        "https://images.unsplash.com/photo-1722553547284-4315a34b3b82?q=80&w=1170&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
     },
     {
       title: "EXCELLENCE IN EXPORT",
@@ -27,7 +27,7 @@ const BannerSlider = () => {
       subtitle: "Quality You Can Count On",
       description: "Premium Agricultural Products Since Years.",
       image:
-        "https://images.unsplash.com/photo-1592924357228-91a4daadcfea?q=80&w=1470",
+        "https://images.unsplash.com/photo-1578907814239-d2654ba61616?q=80&w=1170&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
     },
   ];
 
@@ -74,9 +74,9 @@ const BannerSlider = () => {
               }}
             />
 
-            {/* OVERLAYS */}
-            <div className="absolute inset-0 bg-gradient-to-br from-primary-900/80 via-primary-800/60 to-black/70" />
-            <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent" />
+            {/* OVERLAYS - Modern Neutral Dark (No Green Tint) */}
+            <div className="absolute inset-0 bg-black/30" />
+            <div className="absolute inset-0 bg-gradient-to-t from-black/90 via-black/40 to-black/30" />
 
             {/* CONTENT */}
             <div className="relative max-w-7xl mx-auto px-4 h-full flex items-center">
