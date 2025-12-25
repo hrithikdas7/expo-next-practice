@@ -19,7 +19,7 @@ export default function Footer() {
           </a>
         </div>
         <p className="text-primary-100/60 text-sm">
-          © {new Date().getFullYear()} Sambhav Exporter. All rights reserved.
+          © {new Date().getFullYear()} Sambhav Export. All rights reserved.
         </p>
       </div>
     </footer>

@@ -88,7 +88,7 @@ const OurPillarsAndContact: React.FC = () => {
                         </h3>
 
                         <p className="text-lg text-gray-600 leading-relaxed mb-6">
-                            Partner with <span className="font-bold text-gray-900">Sambhav Exporter</span> to experience the true essence of quality — premium Indian spices, seeds, and produce sourced with care and distributed globally.
+                            Partner with <span className="font-bold text-gray-900">Sambhav Export</span> to experience the true essence of quality — premium Indian spices, seeds, and produce sourced with care and distributed globally.
                         </p>
 
                         <div className="bg-white p-6 rounded-2xl shadow-sm border border-primary-100">

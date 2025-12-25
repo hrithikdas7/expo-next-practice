@@ -12,7 +12,7 @@ export default function ContactMap() {
                             allowFullScreen={true}
                             loading="lazy"
                             referrerPolicy="no-referrer-when-downgrade"
-                            title="Sambhav Exporter Location"
+                            title="Sambhav Export Location"
                         ></iframe>
                     </div>
                 </div>

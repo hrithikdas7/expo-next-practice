@@ -43,7 +43,7 @@ const CoreValues = () => {
             <div className="max-w-7xl mx-auto px-4 relative">
                 <div className="text-center mb-16">
                     <h2 className="text-3xl md:text-4xl font-black text-gray-900 mb-4">
-                        Core Values of <span className="text-primary-700">Sambhav Exporter</span>
+                        Core Values of <span className="text-primary-700">Sambhav Export</span>
                     </h2>
                     <div className="w-40 h-1 bg-gray-200 mx-auto rounded-full overflow-hidden">
                         <div className="w-1/2 h-full bg-primary-500 rounded-full mx-auto"></div>

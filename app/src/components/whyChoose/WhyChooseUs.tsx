@@ -11,7 +11,7 @@ const items: Item[] = [
     {
         title: "Uncompromising Quality Standards",
         description:
-            "At Sambhav Exporter, quality is our promise. From sourcing to final packaging, every product is handled with care to ensure purity, freshness, and export-grade standards.",
+            "At Sambhav Export, quality is our promise. From sourcing to final packaging, every product is handled with care to ensure purity, freshness, and export-grade standards.",
     },
     { title: "Authentic and Natural Products" },
     { title: "Reliable Global Distribution" },
@@ -41,7 +41,7 @@ export default function WhyChooseUs() {
                         Why Choose
                     </h2>
                     <h3 className="text-3xl md:text-4xl font-bold text-primary-700 mb-6">
-                        Sambhav Exporter?
+                        Sambhav Export?
                     </h3>
                     <div className="w-24 h-1.5 bg-gradient-to-r from-primary-400 to-primary-600 rounded-full mx-auto lg:mx-0" />
                 </div>
@@ -98,7 +98,7 @@ export default function WhyChooseUs() {
                             <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent z-10 opactiy-60"></div>
                             <img
                                 src="/why-choose-us.png"
-                                alt="Why Choose Sambhav Exporter"
+                                alt="Why Choose Sambhav Export"
                                 className="w-full h-full object-cover transform transition-transform duration-700 group-hover:scale-105"
                             />
 

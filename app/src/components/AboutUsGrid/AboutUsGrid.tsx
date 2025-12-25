@@ -16,7 +16,7 @@ const AboutUsGrid = () => {
                             Who We Are
                         </h3>
                         <p className="text-gray-600 leading-relaxed mb-6">
-                            At Sambhav Exporter, we are a trusted Indian exporter of premium Onions, Spices, Moringa Powder, Pulses, Cumin Seeds, Turmeric, Black Pepper, and Sesame Seeds, dedicated to delivering freshness, purity, and authentic quality in every shipment.
+                            At Sambhav Export, we are a trusted Indian exporter of premium Onions, Spices, Moringa Powder, Pulses, Cumin Seeds, Turmeric, Black Pepper, and Sesame Seeds, dedicated to delivering freshness, purity, and authentic quality in every shipment.
                         </p>
                     </div>
 
@@ -42,7 +42,7 @@ const AboutUsGrid = () => {
                             Why Choose Us
                         </h3>
                         <p className="text-gray-600 leading-relaxed mb-6">
-                            With a focus on quality, sustainability, timely delivery, and customer satisfaction, Sambhav Exporter is your reliable partner for exporting authentic, high-quality Indian agro products to markets across the globe.
+                            With a focus on quality, sustainability, timely delivery, and customer satisfaction, Sambhav Export is your reliable partner for exporting authentic, high-quality Indian agro products to markets across the globe.
                         </p>
                     </div>
 

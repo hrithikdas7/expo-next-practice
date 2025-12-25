@@ -66,7 +66,7 @@ const AboutSection = () => {
             <p className="text-lg text-gray-700 leading-relaxed mb-6">
               At{" "}
               <span className="font-bold text-primary-700">
-                Sambhav Exporter
+                Sambhav Export
               </span>
               , we believe in offering more than products — we deliver{" "}
               <span className="font-semibold text-primary-800">freshness</span>,{" "}

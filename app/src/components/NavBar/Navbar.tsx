@@ -35,7 +35,7 @@ const Navbar = () => {
               <div className="relative shadow-lg rounded-full overflow-hidden transform transition-transform duration-300 group-hover:scale-105">
                 <Image
                   src="/logo.png"
-                  alt="Sambhav Exporter Logo"
+                  alt="Sambhav Export Logo"
                   width={56}
                   height={56}
                   className="object-cover"
@@ -47,7 +47,7 @@ const Navbar = () => {
                   SAMBHAV
                 </div>
                 <div className="text-xs text-primary-600 tracking-[0.2em] font-medium">
-                  EXPORTER
+                  EXPORT
                 </div>
               </div>
             </Link>
@@ -116,7 +116,7 @@ const Navbar = () => {
 
         {/* MOBILE FOOTER */}
         <div className="px-6 pb-6 text-center text-xs text-gray-500 border-t border-gray-100 pt-4 bg-white">
-          © {new Date().getFullYear()} Sambhav Exporter
+          © {new Date().getFullYear()} Sambhav Export
           <div className="mt-1 text-gray-400">All Rights Reserved</div>
         </div>
       </div>
