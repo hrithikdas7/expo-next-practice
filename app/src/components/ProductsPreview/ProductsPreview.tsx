@@ -3,6 +3,8 @@
 import { useState, useRef } from "react";
 import { Sparkles, Star, ChevronLeft, ChevronRight, ArrowRight } from "lucide-react";
 
+import { products } from "../../data/products";
+
 export default function ProductsPreview() {
   const [hoveredIndex, setHoveredIndex] = useState<number | null>(null);
   const [activeIndex, setActiveIndex] = useState(0);
@@ -23,37 +25,6 @@ export default function ProductsPreview() {
       setActiveIndex(index);
     }
   };
-
-  const products = [
-    {
-      name: 'Red Onions',
-      category: 'Vegetables',
-      description: 'Farm-fresh red onions known for quality and consistency.',
-      img: 'https://images.unsplash.com/photo-1618512496248-a07fe83aa8cb?w=800&q=80',
-      featured: true
-    },
-    {
-      name: 'Fresh Grapes',
-      category: 'Fruits',
-      description: 'Sweet, export-grade grapes from fertile regions.',
-      img: 'https://images.unsplash.com/photo-1631299106224-aae61c217164?q=80&w=687&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D',
-      featured: true
-    },
-    {
-      name: 'Green Chillies',
-      category: 'Vegetables',
-      description: 'Vibrant, spicy green chillies with strong aroma.',
-      img: 'https://images.unsplash.com/photo-1524593410820-38510f580a77?q=80&w=1170&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D',
-      featured: false
-    },
-    {
-      name: 'Capsicum',
-      category: 'Vegetables',
-      description: 'Crisp, rich-colored capsicums of uniform size.',
-      img: 'https://images.unsplash.com/photo-1563565375-f3fdfdbefa83?q=80&w=1974&auto=format&fit=crop',
-      featured: false
-    }
-  ];
 
   return (
     <section className="relative py-12 px-4 bg-gradient-to-b from-white via-primary-50 to-primary-100 overflow-hidden">
@@ -126,7 +97,7 @@ export default function ProductsPreview() {
                     {/* Image Container */}
                     <div className="relative h-56 overflow-hidden shrink-0">
                       <img
-                        src={product.img}
+                        src={product.image}
                         alt={product.name}
                         className="w-full h-full object-cover transform group-hover:scale-110 transition-transform duration-700"
                       />

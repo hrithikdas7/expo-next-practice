@@ -1,29 +1,7 @@
 import Image from "next/image";
 import Link from "next/link";
 import { ArrowRight } from "lucide-react";
-
-const categories = [
-    {
-        name: "Red Onions",
-        image: "https://images.unsplash.com/photo-1618512496248-a07fe83aa8cb?w=800&q=80",
-        description: "Premium quality Nashik Red Onions known for pungency."
-    },
-    {
-        name: "Fresh Grapes",
-        image: "https://images.unsplash.com/photo-1596363805874-4b470bfb04d1?q=80&w=2070&auto=format&fit=crop",
-        description: "Sweet, juicy, and export-quality grapes."
-    },
-    {
-        name: "Green Chillies",
-        image: "https://images.unsplash.com/photo-1567157567761-9f93ba4f4044?q=80&w=2070&auto=format&fit=crop",
-        description: "Fresh green chillies with high heat and aroma."
-    },
-    {
-        name: "Capsicum",
-        image: "https://images.unsplash.com/photo-1563565375-f3fdfdbefa83?q=80&w=1974&auto=format&fit=crop",
-        description: "Fresh, crisp capsicum with vibrant color."
-    }
-];
+import { products } from "../../data/products";
 
 export default function ProductsCategory() {
     return (
@@ -37,7 +15,7 @@ export default function ProductsCategory() {
                 </div>
 
                 <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8">
-                    {categories.map((category, index) => (
+                    {products.map((category, index) => (
                         <div
                             key={index}
                             className="group relative bg-white rounded-3xl overflow-hidden shadow-lg hover:shadow-2xl transition-all duration-300 transform hover:-translate-y-2 border border-primary-100"
